@@ -26,19 +26,23 @@ public class Game {
 
         Mark mark = new Xmark();
         do {
-            System.out.println("Choose the column");
+            System.out.println("Choose the record");
             columnPosition = scanner.nextLine();
             int columnPositionInt = Integer.parseInt(columnPosition);
-            System.out.println("Choose the record");
+            System.out.println("Choose the column");
             recordPosition = scanner.nextLine();
             int recordPositionInt = Integer.parseInt(recordPosition);
             if (mark instanceof Xmark) {
-                board.fillTheBoardWithXmark(columnPositionInt , recordPositionInt );
+                board.fillTheBoardWithXmark(columnPositionInt, recordPositionInt);
                 mark = new Omark();
             }
-            if (mark instanceof Omark) {
-                board.fillTheBoardWithOMark(columnPositionInt , recordPositionInt );
-                mark = new Xmark();
+            else{
+                if (mark instanceof Omark) {
+                    board.fillTheBoardWithOMark(columnPositionInt , recordPositionInt );
+                    mark = new Xmark();
+
+                }
+
             }
 
             board.getTablicaView()[0][0] = ' ';
