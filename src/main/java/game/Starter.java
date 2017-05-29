@@ -19,18 +19,19 @@ public class Starter {
 
             if(beginingMark.equalsIgnoreCase("x")){
                 System.out.println("Okay, X starts");
+                System.out.println();
             }
             if(beginingMark.equalsIgnoreCase("o")){
             System.out.println("Okay, O starts");
+                System.out.println();
             }
-
-
     }
 
     public void tellInstruction(){
         System.out.println("Put the X or O mark on the board by typing the coordinates. ");
         System.out.println("For example:");
-        System.out.println("If you wont to put your mark at A-1 position type A, then type 1");
+        System.out.println("If you want to put your mark at first column on last position");
+        System.out.println("Type: 1 -> enter ->3");
     }
     
 }

@@ -5,5 +5,5 @@ package utils;
  */
 public interface Mark {
 
-    public void putMark();
+    public Mark putMark(int x, int y);
 }
