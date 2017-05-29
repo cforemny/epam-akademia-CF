@@ -6,7 +6,7 @@ package utils;
 public class Board {
 
 
-    private char tablicaView[][] = new char [4][4];
+    private char tablicaView[][] = new char[4][4];
 
     public char[][] getTablicaView() {
         return tablicaView;
@@ -16,7 +16,7 @@ public class Board {
         this.tablicaView = tablicaView;
     }
 
-    public void createBoardView(){
+    public void createBoardView() {
         tablicaView[0][0] = ' ';
         tablicaView[0][1] = '1';
         tablicaView[0][2] = '2';
@@ -26,8 +26,8 @@ public class Board {
         tablicaView[3][0] = '3';
 
 
-        for(int i=0; i< tablicaView.length; i++){
-            for(int j=0; j< tablicaView[i].length; j++)
+        for (int i = 0; i < tablicaView.length; i++) {
+            for (int j = 0; j < tablicaView[i].length; j++)
                 System.out.print(tablicaView[i][j] + " ");
             System.out.println();
         }
@@ -35,12 +35,12 @@ public class Board {
 
     }
 
-    public void fillTheBoardWithXmark(int x, int y){
-        tablicaView[x][y] = 'x';
+    public void fillTheBoardWithXmark(int x, int y) {
+        this.tablicaView[x][y] = 'x';
     }
 
-    public void fillTheBoardWithOMark(int x, int y){
-        tablicaView[x][y] = 'o';
+    public void fillTheBoardWithOMark(int x, int y) {
+        this.tablicaView[x][y] = 'o';
     }
 
 

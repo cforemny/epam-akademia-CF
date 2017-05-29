@@ -40,9 +40,7 @@ public class Game {
                 if (mark instanceof Omark) {
                     board.fillTheBoardWithOMark(columnPositionInt , recordPositionInt );
                     mark = new Xmark();
-
                 }
-
             }
 
             board.getTablicaView()[0][0] = ' ';
@@ -60,8 +58,6 @@ public class Game {
             System.out.println();
 
         } while (true);
-
-
     }
 
 

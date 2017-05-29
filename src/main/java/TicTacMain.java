@@ -1,3 +1,4 @@
+import game.Game;
 import game.Starter;
 import utils.Board;
 
@@ -7,14 +8,15 @@ import utils.Board;
 public class TicTacMain {
     public static void main(String[] args) {
 
+        Board gameBoard = new Board();
         Starter starter = new Starter();
+        Game game = new Game();
         starter.startTheGame();
 
-
-        Board gameBoard = new Board();
-        gameBoard.createBoardView();
         starter.tellInstruction();
+        gameBoard.createBoardView();
 
+        game.playTheGame();
 
     }
 }
