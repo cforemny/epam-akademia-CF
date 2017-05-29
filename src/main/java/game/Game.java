@@ -5,6 +5,7 @@ import utils.Mark;
 import utils.Omark;
 import utils.Xmark;
 
+import javax.swing.*;
 import java.util.Scanner;
 
 /**
@@ -13,23 +14,34 @@ import java.util.Scanner;
 public class Game {
 
     private Board board;
-    private Mark mark;
+    private WinConditiion winCondition;
     private Scanner scanner;
     private String columnPosition;
     private String recordPosition;
 
-    public Board playTheGame(Mark mark){
-
-
-        System.out.println("Choose the column");
-        columnPosition = scanner.nextLine();
-        System.out.println("Choose the column");
-        recordPosition = scanner.nextLine();
 
 
 
+    public void playTheGame(Mark mark){
 
-        return board;
+        WinConditiion winConditiion = new WinConditiion();
+        do{
+            System.out.println("Choose the column");
+            columnPosition = scanner.nextLine();
+            int columnPositionInt = Integer.parseInt(columnPosition);
+            System.out.println("Choose the column");
+            recordPosition = scanner.nextLine();
+            int recordPositionInt = Integer.parseInt(recordPosition);
+            if(mark.equals('x')){
+                board.fillTheBoardWithXmark(columnPositionInt+1,recordPositionInt+1);
+            }
+            if(mark.equals('o')){
+                board.fillTheBoardWithOMark(columnPositionInt+1,recordPositionInt+1);
+            }
+        }while(winConditiion.isTheGameEnd(board));
+
+
+       board.createBoardView();
     }
 
 
